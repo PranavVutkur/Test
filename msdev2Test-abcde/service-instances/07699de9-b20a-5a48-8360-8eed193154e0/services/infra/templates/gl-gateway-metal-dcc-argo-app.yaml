@@ -1,0 +1,25 @@
+# (C) Copyright 2021 Hewlett Packard Enterprise Development LP
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gl-gateway-metal-dcc
+  namespace: argocd
+spec:
+  destination:
+    namespace: infra
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    chart: gl-gateway-metal-dcc
+    repoURL: https://harbor.gl-hpe.local/chartrepo/library
+    targetRevision: 1.14.0
+    plugin:
+      name: sops
+      env:
+      - name: VALUE_FILE
+        value: {{ .Files.Get "gl-gateway-metal-dcc/gl-gateway-metal-dcc-values.yaml" | quote }}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

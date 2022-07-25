@@ -1,0 +1,7 @@
+nfscluster:
+  ipaddress: {{ gateway_config['gatewayConfig']['infraServices']['DrbdCluster']['DrbdCluster1'][0]['ip'] }}
+  path: {{ gateway_config['gatewayConfig']['infraServices']['DrbdCluster']['DrbdCluster1'][0]['nfsShare'] }}
+
+image:
+  registry: harbor.gl-hpe.local
+  repository: library/gl-gateway-sat-tool

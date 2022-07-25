@@ -1,0 +1,25 @@
+# (C) Copyright 2021 Hewlett Packard Enterprise Development LP
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gl-gateway-sat-tool
+  namespace: argocd
+spec:
+  destination:
+    namespace: infra
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    chart: gl-gateway-sat-tool
+    repoURL: https://harbor.gl-hpe.local/chartrepo/library
+    targetRevision: 2.9.2
+    plugin:
+      name: sops
+      env:
+      - name: VALUE_FILE
+        value: {{ .Files.Get "gl-gateway-sat-tool/gl-gateway-sat-tool-values.yaml" | quote }}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

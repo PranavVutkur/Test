@@ -1,0 +1,16 @@
+# (C) Copyright 2021 Hewlett Packard Enterprise Development LP
+
+env:
+  siteID: {{ gateway_config['gatewayConfig']['global']['serviceInstanceId'] }}
+  siteName: {{ gateway_config['gatewayConfig']['global']['tenantName'] }}_{{ gateway_config['gatewayConfig']['global']['serviceInstanceId'] }}
+  siteLocation: {{ gateway_config['gatewayConfig']['global']['tenantLocation'] }}
+  metalURL: {{ gateway_config['gatewayConfig']['infraServices']['lhAgent']['metalURL'] }}
+  dataCenter: {{ gateway_config['gatewayConfig']['global']['tenantLocation'] }}
+  distributionURL: {{ gateway_config['gatewayConfig']['infraServices']['lhAgent']['distributionURL'] }}
+  tenantID: {{ gateway_config['gatewayConfig']['global']['tenantId'] }}
+  spaceID: {{ gateway_config['gatewayConfig']['infraServices']['lhAgent']['spaceID'] }}
+  httpProxy: {{ gateway_config['gatewayConfig']['global']['proxyIp'] }}:{{ gateway_config['gatewayConfig']['global']['proxyPort'] }}
+  httpsProxy: {{ gateway_config['gatewayConfig']['global']['proxyIp'] }}:{{ gateway_config['gatewayConfig']['global']['proxyPort'] }}
+  targetURL: {{ gateway_config['gatewayConfig']['infraServices']['lhAgent']['targetURL'] }}
+  scmURL: {{ gateway_config['gatewayConfig']['infraServices']['lhAgent']['scmURL'] }}
+  identityURL: {{ gateway_config['gatewayConfig']['infraServices']['lhAgent']['identityURL'] }}

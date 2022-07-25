@@ -1,0 +1,25 @@
+{
+  "global": {
+    "proxyIp": "<<TO_BE_UPDATED_DAY0_DAY1>>",
+    "proxyPort": "<<TO_BE_UPDATED_DAY0_DAY1>>",
+    "proxyUsername": "<<TO_BE_UPDATED_DAY0_DAY1>>",
+    "proxyPassword": "vaultProxyPassword",
+    "serviceInstanceId": "07699de9-b20a-5a48-8360-8eed193154e0",
+    "tenantName": "msdev2Test",
+    "tenantLocation": "<<TO_BE_UPDATED>>",
+    "tenantId": "abcde",
+    "natIp": "10.10.10.1",
+    "cpversion": "2022-07-25",
+    "installMode": "standard",
+    "tenantCount": "1",
+    "product": "hpcaas",
+    "gatewayType": "physical",
+    "deploymentMode": "HA",
+    "productID": "R2A93AAE",
+    "day0Password": "vaultGlobalDay0Password",
+    "integConfigRepoDeploykey": "vaultIntegConfigRepoDeploykey",
+    "prodConfigRepoDeploykey": "vaultProdConfigRepoDeploykey",
+    "jfrogUsername": "vaultGlobalJfrogUsername",
+    "jfrogPassword": "vaultGlobalJfrogPassword"
+  }
+}

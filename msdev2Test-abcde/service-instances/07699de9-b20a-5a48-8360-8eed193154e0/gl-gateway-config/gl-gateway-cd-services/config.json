@@ -1,0 +1,13 @@
+{
+  "cdServices": {
+    "namespace": "argoCD",
+    "argoCD": {
+      "svcName": "gl-argoCD",
+      "svcFqdn": "gl-argoCD.gl-hpe.local",
+      "argocdUsername": "vaultGlobalArgocdUsername",
+      "argocdPassword": "vaultGlobalArgocdPassword",
+      "jfrogUsername": "vaultGlobalJfrogUsername",
+      "jfrogPassword": "vaultGlobalJfrogPassword"
+    }
+  }
+}

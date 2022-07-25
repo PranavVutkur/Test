@@ -1,0 +1,29 @@
+# (C) Copyright 2021 Hewlett Packard Enterprise Development LP
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gl-gateway-lhagent
+  namespace: argocd
+spec:
+  destination:
+    namespace: infra
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    chart: gl-gateway-lhagent
+    repoURL: https://harbor.gl-hpe.local/chartrepo/library
+    targetRevision: 1.1.0
+    plugin:
+      name: sops
+      env:
+      - name: VALUE_FILE
+        value: {{ .Files.Get "gl-gateway-lhagent/gl-gateway-lhagent-values.yaml" | quote }}
+      - name: SOPS_KMS_ARN
+        value: arn:aws:kms:us-west-2:125403006574:key/9935297b-a97b-4aeb-aa50-fc75d7895d02+arn:aws:iam::125403006574:role/sops-common-services-role
+      - name: SOP_FILE
+        value: {{ .Files.Get "gl-gateway-lhagent/gl-gateway-lhagent-secrets.yaml" | quote }}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

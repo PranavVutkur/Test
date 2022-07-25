@@ -1,0 +1,72 @@
+{
+  "operationalServices": {
+    "namespace": "operations",
+    "opsgateway": {
+      "svcName": "gl-opsgateway",
+      "svcFqdn": "gl-opsgateway.gl-hpe.local",
+      "activationKey": "<<TO_BE_UPDATED>>",
+      "template": "<<TO_BE_UPDATED>>",
+      "opsagentKey": "vaultglocoauthkey",
+      "opsagentSecret": "vaultglocoauthsecret",
+      "opsagentClientId": "85a49354-6d8a-46b7-8d04-8fb3991e2662"
+
+    },
+     "kubeagent":{
+      "gloc_config_api_server": "hpe-dev.api.try.opsramp.com",
+      "gloc_k3s_integration_res_id": "39ccc053-b0f3-49f2-935f-ed52a774e11e",
+      "gloc_k3s_master_integration_id": "INTG-aab7d66d-afc8-497e-b1a5-b80665140038",
+      "gloc_k3s_integration_name": "gloc_intg_kubernetes_27168_FortCollins",
+      "gloc_config_proxy_password": "<<TO_BE_UPDATED>>",
+      "gloc_config_proxy_username": "<<TO_BE_UPDATED>>"
+    },
+    "logzio": {
+      "svcName": "gl-logzio",
+      "svcFqdn": "gl-logzio.gl-hpe.local",
+      "shippingToken": "vaultGlobalLogzShippingToken",
+      "endpointUrl": "vaultGlobalLogzEndpoint",
+      "templateName": "<<TO_BE_UPDATED>>",
+      "logstashPort": "5054",
+      "rsyslogPort": "5000",
+      "fluentdPort": "24224",
+      "logstashImageRegistry": "hcss-talos-dev-docker.jfrog.io",
+      "logstashImageRegistryUsername": "vaultLogstashImageRegistryUsername",
+      "logstashImageRegistryPassword": "vaultLogstashImageRegistryPassword",
+      "fluentdForwardHosts": [],
+      "fluentdNsWhitelist": "common,infra,observability,operations,opsramp-agent,vmaas",
+      "proxyUrl": "<<TO_BE_UPDATED>>",
+      "noProxy": "<<TO_BE_UPDATED>>",
+      "fluentd_service_field_name": "",
+      "fluentd_service_field_value": ""
+    },
+    "midServer": {
+      "svcName": "gl-servicenow-evt",
+      "svcFqdn": "gl-servicenow-evt.gl-hpe.local",
+      "eventMidserverInstance": "HPCDEV2_FTC_EVT_MID1",
+      "eventMidserverInstanceUserName": "HPCDEV2_FTC_EVT_MID1",
+      "eventMidserverInstancePassword": "vaultEventMidserverPassword",
+      "discoveryMidserverInstance": "HPCDEV2_FTC_DIS_MID1",
+      "discoveryMidserverInstanceUserName": "HPCDEV2_FTC_DIS_MID1",
+      "discoveryMidserverInstancePassword": "vaultDiscoveryMidserverPassword",
+      "hostName": "<<TO_BE_UPDATED>>",
+      "templateName": "<<TO_BE_UPDATED>>"
+    },
+    "talosSip": {
+      "talosSipImageRegistry": "hcss-talos-dev-docker.jfrog.io",
+      "talosSipImageRepo": "library/talos-integration-provider",
+      "talosSipImageRegistryUsername": "vaultTalosSipImageRegistryUsername",
+      "talosSipImageRegistryPassword": "vaultTalosSipImageRegistryPassword",
+      "logzioChartName": "fluentd-forward",
+      "logzioChartVersion": "0.2.16",
+      "logzioFluentdPort": "24224",
+      "logzioNamespaceWhitelist": "hpe-.*,kube-.*,opsramp-agent,istio-system",
+      "glocChartName": "gloc-agent",
+      "glocChartVersion": "0.2.14",
+      "glocPortalUrl": "<To be updated. Ex: https://hpe-dev.api.try.opsramp.com>",
+      "glocGatewayProxyPort": "3128",
+      "proxyUrl": "",
+      "logzioGlocNamespace": "caas-default",
+      "glocOpsOauthKey": "vaultOpsRampOauthKey",
+      "glocOpsOauthSecret": "vaultOpsRampOauthSecret"
+     }
+  }
+}

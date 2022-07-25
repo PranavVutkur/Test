@@ -1,0 +1,31 @@
+HA:
+  nfscluster:
+    ipaddress: {{ gateway_config['gatewayConfig']['infraServices']['DrbdCluster']['DrbdCluster1'][0]['ip'] }}
+    path: {{ gateway_config['gatewayConfig']['infraServices']['DrbdCluster']['DrbdCluster1'][0]['nfsShare'] }}
+
+image:
+  registry: harbor.{{ gateway_config['gatewayConfig']['infraServices']['coreNetwork']['dnsDomainname'] }}
+  repository: library/gl-gateway-lhupdate
+ 
+tenantname: {{ gateway_config['gatewayConfig']['global']['tenantName'] }}
+tenantid: {{ gateway_config['gatewayConfig']['global']['tenantId'] }}
+serviceinstanceid: {{ gateway_config['gatewayConfig']['global']['serviceInstanceId'] }}
+env: dev
+productid: {{ gateway_config['gatewayConfig']['global']['productID'] }}
+
+config:
+  node1ip: {{ gateway_config['gatewayConfig']['infraServices']['gatewayNodes'][0]['ip'] }}
+  node2ip: {{ gateway_config['gatewayConfig']['infraServices']['gatewayNodes'][1]['ip'] }}
+  node3ip: {{ gateway_config['gatewayConfig']['infraServices']['gatewayNodes'][2]['ip'] }}
+  k3snode1ip: {{ gateway_config['gatewayConfig']['infraServices']['k3sCluster']['k3svm'][0]['ip'] }}
+  k3snode2ip: {{ gateway_config['gatewayConfig']['infraServices']['k3sCluster']['k3svm'][1]['ip'] }}
+  k3snode3ip: {{ gateway_config['gatewayConfig']['infraServices']['k3sCluster']['k3svm'][2]['ip'] }}
+  ilo1ip: {{ gateway_config['gatewayConfig']['infraServices']['gatewayNodes'][0]['iloAddress'] }}
+  ilo2ip: {{ gateway_config['gatewayConfig']['infraServices']['gatewayNodes'][1]['iloAddress'] }}
+  ilo3ip: {{ gateway_config['gatewayConfig']['infraServices']['gatewayNodes'][2]['iloAddress'] }}
+  domainname: {{ gateway_config['gatewayConfig']['infraServices']['coreNetwork']['dnsDomainname'] }}
+  proxyip: {{ gateway_config['gatewayConfig']['global']['proxyIp'] }}
+  proxyport: {{ gateway_config['gatewayConfig']['global']['proxyPort'] }}
+  ovip: {{ gateway_config['gatewayConfig']['infraServices']['oneview']['ip'] }}
+  afcip: {{ gateway_config['gatewayConfig']['infraServices']['afc']['ip'] }}
+

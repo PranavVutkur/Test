@@ -1,0 +1,219 @@
+{
+  "infraServices": {
+    "gatewayNodes": [
+      {
+        "ip": "172.16.3.3",
+        "fqdn": "gl-sms01.gl-hpe.local",
+        "userName": "vaultNode1Username",
+        "password": "vaultNode1Password",
+        "iloAddress": "",
+        "iloUser": "vaultAuroraILOUser1",
+        "iloPassword": "vaultAuroraILOPassword1",
+        "iloSsaMasterKey": "vaultILOSSAMasterKey1",
+        "iloSsaPassword": "vaultILOSSAPassword1"
+      },
+      {
+        "ip": "172.16.3.3",
+        "fqdn": "gl-sms02.gl-hpe.local",
+        "userName": "vaultNode2Username",
+        "password": "vaultNode2Password",
+        "iloAddress": "",
+        "iloUser": "vaultAuroraILOUser2",
+        "iloPassword": "vaultAuroraILOPassword2",
+        "iloSsaMasterKey": "vaultILOSSAMasterKey2",
+        "iloSsaPassword": "vaultILOSSAPassword2"
+      },
+      {
+        "ip": "172.16.3.3",
+        "fqdn": "gl-sms03.gl-hpe.local",
+        "userName": "vaultNode3Username",
+        "password": "vaultNode3Password",
+        "iloAddress": "",
+        "iloUser": "vaultAuroraILOUser3",
+        "iloPassword": "vaultAuroraILOPassword3",
+        "iloSsaMasterKey": "vaultILOSSAMasterKey3",
+        "iloSsaPassword": "vaultILOSSAPassword3"
+      }
+    ],
+    "DrbdCluster": {
+      "DrbdCluster1": [
+        {
+        "ip": "172.28.2.11",
+        "componentName" : "sat",
+        "nfsShare" : "/srv/nfs/default_HA-1"
+        },
+        {
+        "ip": "172.28.2.11",
+        "componentName" : "ipam",
+        "nfsShare" : "/srv/nfs/default_HA-1"
+        },
+        {
+        "ip": "172.28.2.11",
+        "componentName" : "harbor",
+        "nfsShare" : "/srv/nfs/default_HA-2"
+        },
+        {
+        "ip": "172.28.2.11",
+        "componentName" : "pulp",
+        "nfsShare" : "/srv/nfs/default_HA-2"
+        },
+        {
+        "ip": "172.28.2.11",
+        "componentName" : "aurora",
+        "nfsShare" : "/srv/nfs/default_HA-2"
+        },
+        {
+          "ip": "172.28.2.11",
+          "componentName" : "aurora",
+          "nfsShare" : "/srv/nfs/default_HA-1"
+          }
+        ]
+    }, 
+    "coreNetwork": {
+      "dnsIp": "172.16.5.4",
+      "dnsDomainname": "gl-hpe.local",
+      "ntpIp": "172.16.5.4"
+    },
+    "afc": {
+      "ip": "",
+      "fqdn": "",
+      "adminUsername": "vaultAFCUserName",
+      "adminPassword": "vaultAFCPassword",
+      "port": "32000"
+    },
+    "tor": [
+      {
+        "ip": "",
+        "fqdn": "",
+        "username": "",
+        "password": ""
+      },
+      {
+        "ip": "",
+        "fqdn": "",
+        "username": "",
+        "password": ""
+      }
+    ],
+    "oobm": [
+      {
+        "ip": "",
+        "fqdn": "",
+        "username": "",
+        "password": ""
+      },
+      {
+        "ip": "",
+        "fqdn": "",
+        "username": "",
+        "password": ""
+      }
+    ],
+    "k3sCluster": {
+      "ip": "",
+      "name": "",
+      "k3svm": [
+        {
+          "ip": "172.16.3.3",
+          "fqdn": "master01.gl-hpe.local",
+          "username": "vaultK3SNode1Username",
+          "password": "vaultK3SNode1Password"
+        },
+        {
+          "ip": "172.16.3.3",
+          "fqdn": "master02.gl-hpe.local",
+          "username": "vaultK3SNode2Username",
+          "password": "vaultK3SNode2Password"
+        },
+        {
+          "ip": "172.16.3.3",
+          "fqdn": "master04.gl-hpe.local",
+          "username": "vaultK3SNode3Username",
+          "password": "vaultK3SNode3Password"
+        }
+      ]
+    },
+    "oneview": {
+      "ip": "",
+      "fqdn": "",
+      "username": "vaultOneviewUserName",
+      "password": "vaultOneviewPassword"
+    },
+    "iloAmp": {
+      "ip": "",
+      "fqdn": "",
+      "username": "vaultIloAmpUserName",
+      "password": "vaultIloAmpPassword"
+    },
+    "ssmc": {
+      "ip": "",
+      "fqdn": "",
+      "username": "",
+      "password": ""
+    },
+    "lhAgent" : {
+      "metalURL": "",
+      "spaceID": "",
+      "targetURL": "",
+      "scmURL": "",
+      "identityURL": "",
+      "awsAccessKeyID": "vaultLHAgentAWSAccessKeyID",
+      "awsSecretAccessKey": "vaultLHAgentAWSSecretAccessKey",
+      "awsRegion": "vaultLHAgentAWSRegion",
+      "distributionURL": ""
+    },
+    "metalDcc" : {
+      "IPS": "",
+      "NO_PROXY": "",
+      "PORTAL": "",
+      "GRPC": "",
+      "STATIC": "",
+      "ID": "",
+      "CERT": "",
+      "CACERT": "",
+      "KEY": ""
+    },
+    "pdu": [
+      {
+        "ip": "",
+        "fqdn": "",
+        "username": "",
+        "password": ""
+      },
+      {
+        "ip": "",
+        "fqdn": "",
+        "username": "",
+        "password": ""
+      }
+    ],
+    "infraContainerServices": {
+      "harborRegistryService": {
+        "harborUsername": "vaultHarborRegistryUsername",
+        "harborPassword": "vaultHarborRegistryPassword"
+      },
+      "pulpRegistryService": {
+        "pulpUsername": "vaultPulpUsername",
+        "pulpPassword": "vaultPulpRegistryPassword"
+      },
+      "veleroService": {
+        "veleros3awsAccessKeyID": "vaultVeleroS3BucketAWSAccessKeyID",
+        "veleros3awsSecretAccessKey": "vaultVeleroS3BucketAWSSecretAccessKey",
+        "veleros3awsRegion": "us-west-2",
+        "veleros3BucketName": "gl-gateway-backup-restore"
+      },
+      "lhupdateService": {
+        "jfroguser": "vaultJfrogUserlhcpslesrepo",
+        "jfrogpassword": "vaultJfrogPasswordlhcpslesrepo",
+        "uiuser": "vaultUIUser",
+        "uipassword": "vaultUIPassword",
+        "uisuperuser": "vaultUISuperUser",
+        "uisuperuserpassword": "vaultUISuperUserPassword"
+      },
+      "ipamService": {
+        "dbPassword": "vaultIPAMdbPassword",
+        "rootPassword": "vaultIPAMrootPassword"
+      }
+    }
+  }
+}

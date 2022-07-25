@@ -1,0 +1,78 @@
+gl-gateway-aurora-services-integ-config:
+  gl-gateway-aurora:
+    deploy: false
+    version: 1.0.2
+gl-gateway-common-services-integ-config:
+  gl-gateway-download-manager:
+    deploy: false
+    version: 1.0.7
+  gl-gateway-ldap-proxy:
+    deploy: false
+    version: 1.0.0
+  gl-gateway-ldap-server:
+    deploy: false
+    version: 1.0.5
+  gl-gateway-rda-cas-ms:
+    deploy: false
+    version: 1.3.3
+  gl-gateway-seed:
+    deploy: false
+    version: 1.3.5
+  gl-gateway-vault:
+    deploy: false
+    version: 1.2.9
+gl-gateway-infra-services-integ-config:
+  gl-gateway-harbor-registry:
+    deploy: false
+    version: 1.0.7
+  gl-gateway-ipam:
+    deploy: false
+    version: 1.0.9
+  gl-gateway-lhagent:
+    deploy: true
+    version: 1.1.0
+  gl-gateway-lhupdate:
+    deploy: true
+    version: 1.0.6
+  gl-gateway-metal-dcc:
+    deploy: true
+    version: 1.14.0
+  gl-gateway-pulp:
+    deploy: false
+    version: 1.0.7
+  gl-gateway-sat-tool:
+    deploy: true
+    version: 2.9.2
+  gl-gateway-velero:
+    deploy: false
+    version: 1.0.2
+gl-gateway-metering-services-integ-config:
+  gl-gateway-metering:
+    deploy: false
+    version: 0.0.2
+gl-gateway-observability-services-integ-config:
+  gl-gateway-jaegertracing:
+    deploy: false
+    version: 1.0.5
+  gl-gateway-prometheus:
+    deploy: false
+    version: 1.0.5
+gl-gateway-operational-services-integ-config:
+  fluentd-forward:
+    deploy: false
+    version: 0.2.16
+  gl-gateway-kubestate-metrics:
+    deploy: false
+    version: 1.0.6
+  gl-gateway-logz-proxy:
+    deploy: false
+    version: 0.3.5
+  gl-gateway-servicenow-midserver:
+    deploy: false
+    version: 0.0.3
+  gloc-agent:
+    deploy: false
+    version: 0.2.14
+  talos-integration-provider:
+    deploy: false
+    version: 0.0.13

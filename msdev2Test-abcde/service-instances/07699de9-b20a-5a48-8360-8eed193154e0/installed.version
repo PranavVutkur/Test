@@ -1,0 +1,9 @@
+gl-gateway-infra-services-integ-config:
+  gl-gateway-lhagent:
+    version: 1.1.0
+  gl-gateway-lhupdate:
+    version: 1.0.6
+  gl-gateway-metal-dcc:
+    version: 1.14.0
+  gl-gateway-sat-tool:
+    version: 2.9.2

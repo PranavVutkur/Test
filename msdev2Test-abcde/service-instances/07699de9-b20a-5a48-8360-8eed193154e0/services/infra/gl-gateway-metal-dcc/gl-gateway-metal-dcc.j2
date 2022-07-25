@@ -1,0 +1,14 @@
+# (C) Copyright 2022 Hewlett Packard Enterprise Development LP
+
+# provide the tenant specifics
+env:
+  HTTPS_PROXY: {{ gateway_config['gatewayConfig']['global']['proxyIp'] }}:{{ gateway_config['gatewayConfig']['global']['proxyPort'] }}
+  IPS: {{ gateway_config['gatewayConfig']['infraServices']['metalDcc']['IPS'] }}
+  NO_PROXY: {{ gateway_config['gatewayConfig']['infraServices']['metalDcc']['NO_PROXY'] }}
+  PORTAL: {{ gateway_config['gatewayConfig']['infraServices']['metalDcc']['PORTAL'] }}
+  GRPC: {{ gateway_config['gatewayConfig']['infraServices']['metalDcc']['GRPC'] }}
+  STATIC: {{ gateway_config['gatewayConfig']['infraServices']['metalDcc']['STATIC'] }}
+  ID: {{ gateway_config['gatewayConfig']['infraServices']['metalDcc']['ID'] }}
+  CERT: {{ gateway_config['gatewayConfig']['infraServices']['metalDcc']['CERT'] }}
+  CACERT: {{ gateway_config['gatewayConfig']['infraServices']['metalDcc']['CACERT'] }}
+  KEY: {{ gateway_config['gatewayConfig']['infraServices']['metalDcc']['KEY'] }}

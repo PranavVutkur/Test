@@ -1,0 +1,62 @@
+{
+    "vmConfigdata": {
+        "basicInfo": {
+            "networkInfo": {
+                "ipaddress": "172.28.8.3",
+                "netmask": "255.255.240.0",
+                "gateway": "172.28.15.254",
+                "hostname": "gl-virtual-gateway01"
+                },
+            "proxyInfo": {
+                "proxyEnabled": "yes",
+                "httpProxy": "http://proxy.houston.hpecorp.net:8080/",
+                "httpsProxy": "http://proxy.houston.hpecorp.net:8080/"
+                },
+            "dnsInfo": {
+                "domainName": "cgw-hpe.net",
+                "primaryDNS": "172.28.15.254",
+                "secondaryDNS": "8.8.8.8"
+                },
+            "ntpInfo": {
+                "primaryNTPServer": "ntp.hpecorp.net",
+                "secondaryNTPServer": ""
+                }
+            }
+        },
+    "applicationInfo": {
+        "argoCDInfo": {
+                "password": "vaultGlobalArgocdPassword"
+                },
+        "harborInfo": {
+                "password": "vaultHarborRegistryPassword"
+                },
+        "pulpInfo": {
+            "password": "vaultPulpRegistryPassword"
+        },
+        "metalLBInfo": {
+                "startIPAddress": "172.28.8.4",
+                "endIPAddress": "172.28.8.10"
+                },
+        "multus": {
+                "startIPAddress": "192.168.1.200",
+                "endIPAddress": "192.168.1.216",
+                "gateway": "192.168.1.1",
+                "subnet": "192.168.1.0/24"
+                }
+        },
+    "vsphereInfo": {
+        "vCPOVA": "",
+        "vCenterServer": "",
+        "vCenterUsername": "vaultvCenterUsername",
+        "vCenterPassword": "vaultvCenterPassword",
+        "vCenterNetwork": "",
+        "esxiHost": "",
+        "datastore": "",
+        "vCPHostname": "",
+        "vCPResourcePool": "", 
+        "vCPMemInGB": "",
+        "vCPCPUCount": "",
+        "vCPDiskSizeinGB": ""
+    }
+}
+    

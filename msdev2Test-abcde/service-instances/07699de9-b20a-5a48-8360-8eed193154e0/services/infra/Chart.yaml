@@ -1,0 +1,7 @@
+# (c) Copyright 2021 Hewlett Packard Enterprise Development LP
+
+apiVersion: v1
+appVersion: "1.0"
+description: Tenant Chart for infra namespace
+name: msdev2test-abcde-07699de9-infra
+version: 0.0.1
